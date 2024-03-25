@@ -18,7 +18,7 @@ const AuthContextProvider = props => {
 
     const controlAuth = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5000/auth/private", config);
+        const { data } = await axios.get("https://bcs-tau.vercel.app/auth/private", config);
         setActiveUser(data.user)
       }
       catch (error) {

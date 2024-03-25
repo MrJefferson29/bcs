@@ -29,7 +29,7 @@ const DetailStory = () => {
       setLoading(true);
       var activeUser = {};
       try {
-        const { data } = await axios.get("/auth/private", {
+        const { data } = await axios.get("https://bcs-tau.vercel.app/auth/private", {
           headers: {
             "Content-Type": "application/json",
             authorization: `Bearer ${localStorage.getItem("authToken")}`,
@@ -43,7 +43,7 @@ const DetailStory = () => {
       }
 
       try {
-        const { data } = await axios.post(`/story/${slug}`, { activeUser });
+        const { data } = await axios.post(`https://bcs-tau.vercel.app/story/${slug}`, { activeUser });
         setStory(data.data);
         setLikeStatus(data.likeStatus);
         setLikeCount(data.data.likeCount);
@@ -74,7 +74,7 @@ const DetailStory = () => {
 
     try {
       const { data } = await axios.post(
-        `/story/${slug}/like`,
+        `https://bcs-tau.vercel.app/story/${slug}/like`,
         { activeUser },
         {
           headers: {
@@ -96,7 +96,7 @@ const DetailStory = () => {
   const handleDelete = async () => {
     if (window.confirm("Do you want to delete this post")) {
       try {
-        await axios.delete(`/story/${slug}/delete`, {
+        await axios.delete(`https://bcs-tau.vercel.app/story/${slug}/delete`, {
           headers: {
             "Content-Type": "application/json",
             authorization: `Bearer ${localStorage.getItem("authToken")}`,
@@ -121,7 +121,7 @@ const DetailStory = () => {
   const addStoryToReadList = async () => {
     try {
       const { data } = await axios.post(
-        `/user/${slug}/addStoryToReadList`,
+        `https://bcs-tau.vercel.app/user/${slug}/addStoryToReadList`,
         { activeUser },
         {
           headers: {

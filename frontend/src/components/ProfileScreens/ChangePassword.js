@@ -30,7 +30,7 @@ const ChangePassword = () => {
 
         try {
             const { data } = await axios.put(
-                "/user/changePassword",
+                "https://bcs-tau.vercel.app/user/changePassword",
                 {
                     newPassword,
                     oldPassword

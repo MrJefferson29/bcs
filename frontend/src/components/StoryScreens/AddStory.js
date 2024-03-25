@@ -48,7 +48,7 @@ const AddStory = () => {
     formdata.append("receiver", receiver)
 
     try {
-      const { data } = await axios.post("http://localhost:5000/story/addstory", formdata, config);
+      const { data } = await axios.post("https://bcs-tau.vercel.app/story/addstory", formdata, config);
       setSuccess("Chi Posted Succesfully, GOOD JOB!");
 
       clearInputs();

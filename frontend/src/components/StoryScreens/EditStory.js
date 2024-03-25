@@ -34,7 +34,7 @@ const EditStory = () => {
       setLoading(true);
       try {
         const { data } = await axios.get(
-          `http://localhost:5000/story/editStory/${slug}`,
+          `https://bcs-tau.vercel.app/story/editStory/${slug}`,
           config,
       { withCredentials: true }
 
@@ -71,7 +71,7 @@ const EditStory = () => {
 
     try {
       const { data } = await axios.put(
-        `http://localhost:5000/story/${slug}/edit`,
+        `https://bcs-tau.vercel.app/story/${slug}/edit`,
         formdata,
         config,
       { withCredentials: true }
