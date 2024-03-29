@@ -13,7 +13,7 @@ const ForgotPasswordScreen = () => {
 
     try {
       const { data } = await axios.post(
-        "https://bcs-tau.vercel.app/auth/forgotpassword",
+        "https://vishis-mauve.vercel.app/auth/forgotpassword",
         { email }
       );
 
