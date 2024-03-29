@@ -23,7 +23,7 @@ const RegisterScreen = () => {
     }
 
     try {
-      const { data } = await axios.post("https://bcs-tau.vercel.app/auth/register", {
+      const { data } = await axios.post("https://vishis-mauve.vercel.app/auth/register", {
         username,
         email,
         password,
