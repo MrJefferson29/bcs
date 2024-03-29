@@ -21,7 +21,7 @@ const PrivateRoute =( ) => {
             },
         };
         try {
-            const { data } = await axios.get("https://bcs-tau.vercel.app/auth/private", config); 
+            const { data } = await axios.get("https://vishis-mauve.vercel.app/auth/private", config); 
 
             setAuth(true)
             setActiveUser(data.user)
