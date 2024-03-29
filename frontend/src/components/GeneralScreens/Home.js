@@ -37,7 +37,7 @@ const Home = () => {
     const getStories = async () => {
       setLoading(true);
       try {
-        let url = `https://bcs-tau.vercel.app/getAllStories?page=${page}`;
+        let url = `https://vishis-mauve.vercel.app/getAllStories?page=${page}`;
         if (searchKey) {
           url += `&search=${searchKey}`;
         }
