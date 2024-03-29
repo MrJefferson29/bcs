@@ -27,7 +27,7 @@ const EditProfile = () => {
         formdata.append("photo", photo)
 
         try {
-            const { data } = await axios.post("https://bcs-tau.vercel.app/user/editProfile", formdata, config)
+            const { data } = await axios.post("https://vishis-mauve.vercel.app/user/editProfile", formdata, config)
 
             setSuccess('Edit Profile successfully ')
             setTimeout(() => {
@@ -119,7 +119,7 @@ const EditProfile = () => {
                                     <div class="absolute">
                                         Currently Image
                                     </div>
-                                    <img src={`https://bcs-tau.vercel.app/userPhotos/${previousPhoto}`} alt="userPhoto" />
+                                    <img src={`https://vishis-mauve.vercel.app/userPhotos/${previousPhoto}`} alt="userPhoto" />
                                 </div>
 
                             </div>
