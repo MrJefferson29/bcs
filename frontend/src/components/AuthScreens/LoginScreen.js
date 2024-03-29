@@ -14,7 +14,7 @@ const LoginScreen = () => {
 
     try {
       const { data } = await axios.post(
-        "https://bcs-tau.vercel.app/auth/login",
+        "https://vishis-mauve.vercel.app/auth/login",
         { email, password }
       );
       localStorage.setItem("authToken", data.token);
